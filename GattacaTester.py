@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 import sys, math
+import Gene_Prediction
+import tokenize
 
 DEBUG = True
 
@@ -21,6 +23,16 @@ while(i<ceiling):
 
 g = int(FILE.readline())
 
+j = int(0)
+predictions = []
+score = 0
+while(j<g):
+	line = FILE.readline().split()
+	#if (dna_strand[line[0]:line[1]]):
+	#	score+=line[2]	
+	predictions = Gene_Prediction.Gene_Prediction(line[0], line[1], line[2])
+	j+=1
+
 if (DEBUG):
         print 'DEBUG: %r' % (DEBUG)
         print 'n: %g' % (n)
@@ -28,6 +40,6 @@ if (DEBUG):
         print 'ceiling: %g' % (ceiling)
 	print 'dna_strand: %r' % (dna_strand)
 	print 'g: %g' % (g)
+	print ''
 
-j = int(0)
-
+print 'score: %g' % (score)
