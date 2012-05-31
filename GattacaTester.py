@@ -2,7 +2,7 @@
 
 import sys, math
 import Gene_Prediction
-import tokenize
+#import tokenize
 
 DEBUG = True
 
@@ -34,10 +34,10 @@ while(j<g):
 	j+=1
 
 if (DEBUG):
-        print 'DEBUG: %r' % (DEBUG)
-        print 'n: %g' % (n)
-        print 'max_line_length: %g' % (max_line_length)
-        print 'ceiling: %g' % (ceiling)
+	print 'DEBUG: %r' % (DEBUG)
+	print 'n: %g' % (n)
+	print 'max_line_length: %g' % (max_line_length)
+	print 'ceiling: %g' % (ceiling)
 	print 'dna_strand: %r' % (dna_strand)
 	print 'g: %g' % (g)
 	print ''
